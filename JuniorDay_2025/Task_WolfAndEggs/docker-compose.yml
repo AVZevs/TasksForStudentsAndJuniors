@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  # Используем Nginx-прокси, чтобы наши разные сайты на разных субдоменах, запущенные в разных
+  # контейнерах были доступны на 80 порту.
+  #nginx-proxy:
+  #  image: jwilder/nginx-proxy      # используем внешний image
+  #  container_name: proxy_proxy     # задаем конкретное имя контейнеру
+  #  restart: always                 # всегда перезапускаем контейнер
+  #  privileged: true
+  #  ports:
+  #    - "80:80"
+  #  volumes:
+  #    - /var/run/docker.sock:/tmp/docker.sock:ro
+      
+  # Главная страница сайта hitsecurity.ru (mock-страница)
+  wolf-hitsec-apache:
+    container_name: wolf-hitsec
+    build:
+      context: .
+      dockerfile: Dockerfile
+    #ports:
+    #  - "80:80"
+    networks:
+      - reverse_proxy
+    restart: unless-stopped   # всегда перезапускаем контейнер, если только не остановили его сами ручками
+
+networks:
+  reverse_proxy:
+    external: true

@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background: #ffecc7;
+}
+
+p {
+  display: block;
+  font-family: sans-serif;
+  margin: 0 auto;
+  padding: 10;
+  color: red;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: inset 0 0 1px #272727;
+}
+
+.login-form {
+  position: relative;
+  width: 370px;
+  height: auto;
+  background: #1b1b1b;
+  padding: 40px 35px 60px;
+  box-sizing: border-box;
+  border: 1px solid #dd9e26;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px orange;
+  background-image: url('/serve_image.php?image=backgr.png');
+  background-size: cover;
+  background-position: center;
+  background: #ffecc7;
+  opacity: 1;
+}
+
+h1 {
+  font-size: 20px;
+  color: #dd9e26;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-shadow: 3px 3px 5px #dd9e26;
+}
+
+.text {
+  font-size: 30px;
+  color: #dd9e26;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-shadow: 3px 3px 5px #dd9e26;
+}
+
+form {
+  margin-top: 40px;
+}
+
+form .field {
+  margin-top: 20px;
+  display: flex;
+}
+
+/* Форма ввода пин-кода */
+#form .recoverBlock {
+  #margin-top: 20px;
+  #display: flex;
+  #background-color: none;
+#  background-image: url('/serve_image.php?image=backgr.png');
+#  background-size: cover;
+#  background-position: center;  
+#}
+
+
+.field .fas {
+  height: 50px;
+  width: 60px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 50px;
+  border: 1px solid #dd9e26;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  background: linear-gradient(#ffecc7, #dd9e26);
+}
+
+.field input, form button {
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 19px;
+  color: #868686;
+  padding: 0 15px;
+  border-radius: 0 5px 5px 0;
+  border: 1px solid #dd9e26;
+  caret-color: #463b31;
+  background: linear-gradient(#ffecc7, #dd9e26);
+}
+
+input:focus {
+  color: #fff;
+  box-shadow: 0 0 5px rgba(255,168,0,.2),
+              inset 0 0 5px rgba(255,168,0,.1);
+  background: linear-gradient(#ffecc7, #dd9e26);
+  animation: glow .8s ease-out infinite alternate;
+}
+
+@keyframes glow {
+   0% {
+    border-color: #dd9e26;
+    box-shadow: 0 0 5px rgba(255,168,0,.2),
+                inset 0 0 5px rgba(0,0,0,.1);
+  }
+   100% {
+    border-color: #dd9e26;
+    box-shadow: 0 0 20px rgba(255,168,0,.6),
+                inset 0 0 10px rgba(255,168,0,.4);
+  }
+}
+
+button {
+  margin-top: 30px;
+  border-radius: 5px!important;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #dd9e26;
+  border: 1px solid #dd9e26;
+  box-shadow: 0 0 5px rgba(255,168,0,.3),
+              0 0 10px rgba(255,168,0,.2),
+              0 0 15px rgba(255,168,0,.1),
+              0 2px 0 orange;
+}
+
+.link {
+  margin-top: 25px;
+  color: #dd9e26;
+}
+
+.link a {
+  color: #ffecc7;
+  text-decoration: none;
+}
+
+.link a:hover {
+  text-decoration: none;
+}
+
+/* The password of the real administrator in Base64 - JlNvbjBmRiV0ZVNTdGVy */
+
+/* Стиль для модального окна */
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0; 
+	top: 0; 
+	width: 100%; 
+	height: 100%; 
+	overflow: auto;
+	background-color: #ffecc7;
+	background-color: rgba(0,0,0,0.4); 
+	padding-top: 60px;
+	#border: 1px solid #dd9e26;
+	#border-right: none;
+	#border-radius: 5px 0 0 5px;
+	box-shadow: 0 0 10px rgba(100,100,100,0.5);
+}
+
+/* Модальное окно содержимое */
+.modal-content {
+	color: #463b31;
+	background-color: #ffecc7;
+	margin: 5% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+	max-width: 500px;
+	border: 1px solid #dd9e26;
+	border-right: none;
+	border-radius: 15px 15px 15px 15px;
+	box-shadow: 0 0 10px rgba(100,100,100,3.5);
+}
+
+/* Кнопка закрытия */
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+		 
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+		 
+.li {
+	display: none;
+}	
